@@ -7,8 +7,10 @@
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 D:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"49 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\main.c
+"52 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\main.c
 [v _main main `(v  1 e 1 0 ]
+"99
+[v _TMR1_interrupt TMR1_interrupt `(v  1 e 1 0 ]
 "52 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 "50 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\mcc_generated_files/mcc.c
@@ -19,16 +21,22 @@
 [v _WDT_Initialize WDT_Initialize `(v  1 e 1 0 ]
 "55 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
-"64 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\mcc_generated_files/tmr0.c
-[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
-"108
-[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
-"130
-[v _TMR0_CallBack TMR0_CallBack `(v  1 e 1 0 ]
-"140
-[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
-"144
-[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"64 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
+"93
+[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
+"99
+[v _TMR1_StopTimer TMR1_StopTimer `(v  1 e 1 0 ]
+"120
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
+"157
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
+"176
+[v _TMR1_CallBack TMR1_CallBack `(v  1 e 1 0 ]
+"185
+[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
+"189
+[v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
 [s S26 . 1 `uc 1 IOCIF 1 0 :1:0 
 `uc 1 INTF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
@@ -46,8 +54,102 @@
 ]
 [u S40 . 1 `S26 1 . 1 0 `S35 1 . 1 0 ]
 [v _INTCONbits INTCONbits `VES40  1 e 1 @11 ]
-"948
-[v _TMR0 TMR0 `VEuc  1 e 1 @23 ]
+[s S68 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 RC3 1 0 :1:3 
+`uc 1 RC4 1 0 :1:4 
+`uc 1 RC5 1 0 :1:5 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+"571
+[u S77 . 1 `S68 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES77  1 e 1 @14 ]
+[s S225 . 1 `uc 1 TMR1IF 1 0 :1:0 
+`uc 1 TMR2IF 1 0 :1:1 
+`uc 1 CCP1IF 1 0 :1:2 
+`uc 1 SSP1IF 1 0 :1:3 
+`uc 1 TXIF 1 0 :1:4 
+`uc 1 RCIF 1 0 :1:5 
+`uc 1 ADIF 1 0 :1:6 
+`uc 1 TMR1GIF 1 0 :1:7 
+]
+"658
+[s S234 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CCPIF 1 0 :1:2 
+]
+[u S237 . 1 `S225 1 . 1 0 `S234 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES237  1 e 1 @17 ]
+"975
+[v _TMR1L TMR1L `VEuc  1 e 1 @24 ]
+"995
+[v _TMR1H TMR1H `VEuc  1 e 1 @25 ]
+"1015
+[v _T1CON T1CON `VEuc  1 e 1 @26 ]
+[s S384 . 1 `uc 1 ON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 nSYNC 1 0 :1:2 
+`uc 1 OSCEN 1 0 :1:3 
+`uc 1 CKPS 1 0 :2:4 
+`uc 1 CS 1 0 :2:6 
+]
+"1057
+[s S391 . 1 `uc 1 TMRON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 SYNC 1 0 :1:2 
+`uc 1 SOSCEN 1 0 :1:3 
+`uc 1 CKPS0 1 0 :1:4 
+`uc 1 CKPS1 1 0 :1:5 
+`uc 1 CS0 1 0 :1:6 
+`uc 1 CS1 1 0 :1:7 
+]
+[s S400 . 1 `uc 1 TMR1ON 1 0 :1:0 
+`uc 1 . 1 0 :1:1 
+`uc 1 nT1SYNC 1 0 :1:2 
+`uc 1 T1OSCEN 1 0 :1:3 
+`uc 1 . 1 0 :2:4 
+`uc 1 T1CS0 1 0 :1:6 
+`uc 1 T1CS1 1 0 :1:7 
+]
+[s S408 . 1 `uc 1 T1ON 1 0 :1:0 
+`uc 1 . 1 0 :3:1 
+`uc 1 T1CKPS0 1 0 :1:4 
+`uc 1 T1CKPS1 1 0 :1:5 
+`uc 1 TMR1CS0 1 0 :1:6 
+`uc 1 TMR1CS1 1 0 :1:7 
+]
+[u S415 . 1 `S384 1 . 1 0 `S391 1 . 1 0 `S400 1 . 1 0 `S408 1 . 1 0 ]
+[v _T1CONbits T1CONbits `VES415  1 e 1 @26 ]
+"1172
+[v _T1GCON T1GCON `VEuc  1 e 1 @27 ]
+[s S452 . 1 `uc 1 GSS 1 0 :2:0 
+`uc 1 GVAL 1 0 :1:2 
+`uc 1 GGO_nDONE 1 0 :1:3 
+`uc 1 GSPM 1 0 :1:4 
+`uc 1 GTM 1 0 :1:5 
+`uc 1 GPOL 1 0 :1:6 
+`uc 1 GE 1 0 :1:7 
+]
+"1207
+[s S460 . 1 `uc 1 GSS0 1 0 :1:0 
+`uc 1 GSS1 1 0 :1:1 
+`uc 1 . 1 0 :5:2 
+`uc 1 T1GE 1 0 :1:7 
+]
+[s S465 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 T1GVAL 1 0 :1:2 
+`uc 1 T1GGO_nDONE 1 0 :1:3 
+`uc 1 T1GSPM 1 0 :1:4 
+`uc 1 T1GTM 1 0 :1:5 
+`uc 1 T1GPOL 1 0 :1:6 
+`uc 1 TMR1GE 1 0 :1:7 
+]
+[s S473 . 1 `uc 1 T1GSS0 1 0 :1:0 
+`uc 1 T1GSS1 1 0 :1:1 
+]
+[u S476 . 1 `S452 1 . 1 0 `S460 1 . 1 0 `S465 1 . 1 0 `S473 1 . 1 0 ]
+[v _T1GCONbits T1GCONbits `VES476  1 e 1 @27 ]
 "1636
 [v _TRISA TRISA `VEuc  1 e 1 @140 ]
 "1698
@@ -56,9 +158,22 @@
 [v _TRISC TRISC `VEuc  1 e 1 @142 ]
 "1822
 [v _TRISE TRISE `VEuc  1 e 1 @144 ]
-"2154
-[v _OPTION_REG OPTION_REG `VEuc  1 e 1 @151 ]
-[s S191 . 1 `uc 1 PS 1 0 :3:0 
+[s S197 . 1 `uc 1 TMR1IE 1 0 :1:0 
+`uc 1 TMR2IE 1 0 :1:1 
+`uc 1 CCP1IE 1 0 :1:2 
+`uc 1 SSP1IE 1 0 :1:3 
+`uc 1 TXIE 1 0 :1:4 
+`uc 1 RCIE 1 0 :1:5 
+`uc 1 ADIE 1 0 :1:6 
+`uc 1 TMR1GIE 1 0 :1:7 
+]
+"1864
+[s S206 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 CCPIE 1 0 :1:2 
+]
+[u S209 . 1 `S197 1 . 1 0 `S206 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES209  1 e 1 @145 ]
+[s S292 . 1 `uc 1 PS 1 0 :3:0 
 `uc 1 PSA 1 0 :1:3 
 `uc 1 TMR0SE 1 0 :1:4 
 `uc 1 TMR0CS 1 0 :1:5 
@@ -66,15 +181,15 @@
 `uc 1 nWPUEN 1 0 :1:7 
 ]
 "2177
-[s S198 . 1 `uc 1 PS0 1 0 :1:0 
+[s S299 . 1 `uc 1 PS0 1 0 :1:0 
 `uc 1 PS1 1 0 :1:1 
 `uc 1 PS2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
 `uc 1 T0SE 1 0 :1:4 
 `uc 1 T0CS 1 0 :1:5 
 ]
-[u S205 . 1 `S191 1 . 1 0 `S198 1 . 1 0 ]
-[v _OPTION_REGbits OPTION_REGbits `VES205  1 e 1 @151 ]
+[u S306 . 1 `S292 1 . 1 0 `S299 1 . 1 0 ]
+[v _OPTION_REGbits OPTION_REGbits `VES306  1 e 1 @151 ]
 "2294
 [v _WDTCON WDTCON `VEuc  1 e 1 @153 ]
 "2353
@@ -89,6 +204,18 @@
 [v _LATA LATA `VEuc  1 e 1 @268 ]
 "2736
 [v _LATB LATB `VEuc  1 e 1 @269 ]
+[s S103 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"2753
+[u S112 . 1 `S103 1 . 1 0 ]
+[v _LATBbits LATBbits `VES112  1 e 1 @269 ]
 "2798
 [v _LATC LATC `VEuc  1 e 1 @270 ]
 "3723
@@ -123,14 +250,26 @@
 [v _INLVLB INLVLB `VEuc  1 e 1 @909 ]
 "9116
 [v _INLVLC INLVLC `VEuc  1 e 1 @910 ]
-"58 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\mcc_generated_files/tmr0.c
-[v _timer0ReloadVal timer0ReloadVal `VEuc  1 e 1 0 ]
-"59
-[v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
-"49 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\main.c
+"57 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\mcc_generated_files/tmr1.c
+[v _timer1ReloadVal timer1ReloadVal `VEus  1 e 2 0 ]
+"58
+[v _TMR1_InterruptHandler TMR1_InterruptHandler `*.37(v  1 e 2 0 ]
+"52 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"73
+"57
+[v main@frag frag `i  1 a 2 0 ]
+"97
+} 0
+"99 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\mcc_generated_files/tmr1.c
+[v _TMR1_StopTimer TMR1_StopTimer `(v  1 e 1 0 ]
+{
+"103
+} 0
+"93
+[v _TMR1_StartTimer TMR1_StartTimer `(v  1 e 1 0 ]
+{
+"97
 } 0
 "50 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -142,16 +281,16 @@
 {
 "75
 } 0
-"64 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\mcc_generated_files/tmr0.c
-[v _TMR0_Initialize TMR0_Initialize `(v  1 e 1 0 ]
+"64 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\mcc_generated_files/tmr1.c
+[v _TMR1_Initialize TMR1_Initialize `(v  1 e 1 0 ]
 {
-"85
+"91
 } 0
-"140
-[v _TMR0_SetInterruptHandler TMR0_SetInterruptHandler `(v  1 e 1 0 ]
+"185
+[v _TMR1_SetInterruptHandler TMR1_SetInterruptHandler `(v  1 e 1 0 ]
 {
-[v TMR0_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 0 ]
-"142
+[v TMR1_SetInterruptHandler@InterruptHandler InterruptHandler `*.37(v  1 p 2 2 ]
+"187
 } 0
 "55 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
@@ -166,22 +305,33 @@
 "52 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `II(v  1 e 1 0 ]
 {
-"63
+"70
 } 0
-"108 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\mcc_generated_files/tmr0.c
-[v _TMR0_ISR TMR0_ISR `(v  1 e 1 0 ]
+"157 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\mcc_generated_files/tmr1.c
+[v _TMR1_ISR TMR1_ISR `(v  1 e 1 0 ]
 {
-"110
-[v TMR0_ISR@CountCallBack CountCallBack `VEus  1 s 2 CountCallBack ]
-"128
+"159
+[v TMR1_ISR@CountCallBack CountCallBack `VEui  1 s 2 CountCallBack ]
+"174
 } 0
-"130
-[v _TMR0_CallBack TMR0_CallBack `(v  1 e 1 0 ]
+"120
+[v _TMR1_WriteTimer TMR1_WriteTimer `(v  1 e 1 0 ]
 {
-"138
+[v TMR1_WriteTimer@timerVal timerVal `us  1 p 2 0 ]
+"140
 } 0
-"144
-[v _TMR0_DefaultInterruptHandler TMR0_DefaultInterruptHandler `(v  1 e 1 0 ]
+"176
+[v _TMR1_CallBack TMR1_CallBack `(v  1 e 1 0 ]
 {
-"147
+"183
+} 0
+"189
+[v _TMR1_DefaultInterruptHandler TMR1_DefaultInterruptHandler `(v  1 e 1 0 ]
+{
+"192
+} 0
+"99 D:\Users\hirot\Desktop\pic\Timer_interrupt_1778\main.c
+[v _TMR1_interrupt TMR1_interrupt `(v  1 e 1 0 ]
+{
+"103
 } 0

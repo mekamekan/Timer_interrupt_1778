@@ -46,10 +46,15 @@
 /*
                          Main application
  */
+
+void TMR1_interrupt(void);
+
 void main(void)
-{
+{   
     // initialize the device
     SYSTEM_Initialize();
+    
+    int frag = 0;
 
     // When using interrupts, you need to set the Global and Peripheral Interrupt Enable bits
     // Use the following macros to:
@@ -66,10 +71,35 @@ void main(void)
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
 
+    TMR1_SetInterruptHandler(TMR1_interrupt);
+    
     while (1)
     {
         // Add your application code
+        if((input_PORT == 1) && (frag == 0)){
+            //チャタリング防止
+            __delay_ms(50);
+            while(input_PORT == 1);
+            __delay_ms(50);
+            
+            //タイマー１開始
+            TMR1_StartTimer();
+            frag = 1;
+        }
+        else if((frag == 1) && (input_PORT == 1)){
+            
+            //タイマー１停止
+            TMR1_StopTimer();
+            frag = 0;
+            
+        }
     }
+}
+
+void TMR1_interrupt(void){
+    
+    LED_Toggle();
+    
 }
 /**
  End of File

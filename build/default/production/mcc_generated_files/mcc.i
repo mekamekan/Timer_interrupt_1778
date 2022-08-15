@@ -19631,25 +19631,33 @@ char *tempnam(const char *, const char *);
 # 1 "mcc_generated_files/interrupt_manager.h" 1
 # 55 "mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/tmr0.h" 1
-# 104 "mcc_generated_files/tmr0.h"
-void TMR0_Initialize(void);
-# 135 "mcc_generated_files/tmr0.h"
-uint8_t TMR0_ReadTimer(void);
-# 174 "mcc_generated_files/tmr0.h"
-void TMR0_WriteTimer(uint8_t timerVal);
-# 210 "mcc_generated_files/tmr0.h"
-void TMR0_Reload(void);
-# 225 "mcc_generated_files/tmr0.h"
-void TMR0_ISR(void);
-# 243 "mcc_generated_files/tmr0.h"
-void TMR0_CallBack(void);
-# 261 "mcc_generated_files/tmr0.h"
- void TMR0_SetInterruptHandler(void (* InterruptHandler)(void));
-# 279 "mcc_generated_files/tmr0.h"
-extern void (*TMR0_InterruptHandler)(void);
-# 297 "mcc_generated_files/tmr0.h"
-void TMR0_DefaultInterruptHandler(void);
+# 1 "mcc_generated_files/tmr1.h" 1
+# 101 "mcc_generated_files/tmr1.h"
+void TMR1_Initialize(void);
+# 130 "mcc_generated_files/tmr1.h"
+void TMR1_StartTimer(void);
+# 162 "mcc_generated_files/tmr1.h"
+void TMR1_StopTimer(void);
+# 197 "mcc_generated_files/tmr1.h"
+uint16_t TMR1_ReadTimer(void);
+# 236 "mcc_generated_files/tmr1.h"
+void TMR1_WriteTimer(uint16_t timerVal);
+# 272 "mcc_generated_files/tmr1.h"
+void TMR1_Reload(void);
+# 311 "mcc_generated_files/tmr1.h"
+void TMR1_StartSinglePulseAcquisition(void);
+# 350 "mcc_generated_files/tmr1.h"
+uint8_t TMR1_CheckGateValueStatus(void);
+# 368 "mcc_generated_files/tmr1.h"
+void TMR1_ISR(void);
+# 385 "mcc_generated_files/tmr1.h"
+void TMR1_CallBack(void);
+# 403 "mcc_generated_files/tmr1.h"
+ void TMR1_SetInterruptHandler(void (* InterruptHandler)(void));
+# 421 "mcc_generated_files/tmr1.h"
+extern void (*TMR1_InterruptHandler)(void);
+# 439 "mcc_generated_files/tmr1.h"
+void TMR1_DefaultInterruptHandler(void);
 # 56 "mcc_generated_files/mcc.h" 2
 # 71 "mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
@@ -19667,7 +19675,7 @@ void SYSTEM_Initialize(void)
     PIN_MANAGER_Initialize();
     OSCILLATOR_Initialize();
     WDT_Initialize();
-    TMR0_Initialize();
+    TMR1_Initialize();
 }
 
 void OSCILLATOR_Initialize(void)
