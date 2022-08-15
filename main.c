@@ -70,7 +70,9 @@ void main(void)
 
     // Disable the Peripheral Interrupts
     //INTERRUPT_PeripheralInterruptDisable();
-
+    
+    LED_SetLow();
+    TMR1_StopTimer();
     TMR1_SetInterruptHandler(TMR1_interrupt);
     
     while (1)
@@ -86,7 +88,11 @@ void main(void)
             TMR1_StartTimer();
             frag = 1;
         }
-        else if((frag == 1) && (input_PORT == 1)){
+        if((frag == 1) && (input_PORT == 1)){
+             //チャタリング防止
+            __delay_ms(50);
+            while(input_PORT == 1);
+            __delay_ms(50);
             
             //タイマー１停止
             TMR1_StopTimer();

@@ -19696,6 +19696,8 @@ void main(void)
 
 
 
+    do { LATBbits.LATB2 = 0; } while(0);
+    TMR1_StopTimer();
     TMR1_SetInterruptHandler(TMR1_interrupt);
 
     while (1)
@@ -19711,7 +19713,11 @@ void main(void)
             TMR1_StartTimer();
             frag = 1;
         }
-        else if((frag == 1) && (PORTCbits.RC7 == 1)){
+        if((frag == 1) && (PORTCbits.RC7 == 1)){
+
+            _delay((unsigned long)((50)*(8000000/4000.0)));
+            while(PORTCbits.RC7 == 1);
+            _delay((unsigned long)((50)*(8000000/4000.0)));
 
 
             TMR1_StopTimer();
